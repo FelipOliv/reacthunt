@@ -1,0 +1,47 @@
+import React, { Component } from 'react'
+import api from '../../services/api'
+import './product.css'
+
+export default class Product extends Component
+{
+    state = {
+
+        product: {}
+    }
+
+    async componentDidMount ()
+    {
+
+        const { id } = this.props.match.params
+
+        const response = await api.get (`/products/${id}`)
+
+        this.setState ({product: response.data})
+    }
+
+    render ()
+    {
+        const { product } = this.state
+
+        return (<div className="product-container">
+
+            <div className="product">
+
+                <h1> { product.title } </h1>
+
+                <p> { product.description } </p>
+
+                <nav>
+                    <a href={ product.url }> { product.url } </a>
+                </nav>
+            </div>
+
+            <footer>
+                <nav className="nav-back">
+                    <a href="/">back to home</a>
+                </nav>
+            </footer>
+
+        </div>)
+    }
+}

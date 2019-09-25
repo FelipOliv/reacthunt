@@ -1,0 +1,83 @@
+.product-list
+{
+    padding: 20px ;
+}
+
+.product-card
+{
+    border: 1px solid #c5c5c5 ;
+    padding: 20px ;
+    background-color: #fff ;
+    margin-bottom: 10px ;
+    box-shadow: 0 1px 2px #c1c1c1;
+}
+
+.product-card strong
+{
+    font-weight: 400 ;
+    color: #545454 ;
+}
+
+.product-card p
+{
+    font-weight: 100 ;
+    margin: 10px 0
+}
+
+.product-card a
+{
+    text-decoration: none ;
+    display: inline-block ;
+    color: rgb(110, 110, 110);
+    background: #c9c0da;
+    padding: 5px 10px ;
+    border-radius: 2px ;
+    font-weight: 200  ;
+    transition: all 0.3s ;
+}
+
+.product-card a:hover
+{
+    background-color: #9687b3 ;
+    color: #fff
+}
+
+.actions
+{
+    display: flex ;
+    justify-content: center
+}
+
+.actions button:nth-child(1)
+{
+    margin-right: 20px ;
+}
+
+.actions button
+{
+    background:  none ;
+    border: none ;
+
+    color: #333 ;
+    background-color: #fff ;
+    padding: 10px 20px;
+    box-shadow: 0 1px 3px #8e8e8e;
+    cursor: pointer;
+    transition: all 0.3s ;
+}
+
+.actions button:hover
+{
+    opacity: .6;
+}
+
+.actions button:disabled
+{
+    opacity: 0.3;
+    cursor: no-drop;
+}
+
+.actions button[disabled]:hover
+{
+    opacity: .6 !important;
+}
